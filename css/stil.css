@@ -1,0 +1,851 @@
+/* ==========================================================================
+   Egehan Teknik Makine — Ortak Stil Dosyası
+   Tüm sayfalar bu tek dosyayı kullanır. Sayfaya özel CSS yazılmaz.
+   ========================================================================== */
+
+/* Yazı tipleri sayfa <head>'lerinde <link> ile yüklenir (performans). */
+
+:root {
+  /* Renk paleti */
+  --renk-grafit: #22272e;
+  --renk-grafit-koyu: #191d22;
+  --renk-celik: #4d90b0;
+  --renk-celik-koyu: #2e5f78;
+  --renk-uyari: #e07a1f;
+  --renk-zemin: #f4f5f6;
+  --renk-metin: #22272e;
+  --renk-metin-acik: #e8eaec;
+
+  /* Tipografi */
+  --yazi-govde: "Barlow", Arial, sans-serif;
+  --yazi-baslik: "Barlow Condensed", Arial, sans-serif;
+
+  /* Düzen */
+  --icerik-genislik: 1120px;
+  --gecis-suresi: 0.15s;
+}
+
+/* --------------------------------------------------------------------
+   Sıfırlama / temel
+   -------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--yazi-govde);
+  color: var(--renk-metin);
+  background: #ffffff;
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--renk-celik-koyu);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--yazi-baslik);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Klavye odağı — her yerde görünür kalsın */
+:focus-visible {
+  outline: 3px solid var(--renk-uyari);
+  outline-offset: 2px;
+}
+
+/* Hareket azaltma tercihine saygı */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.gecis {
+  transition: background-color var(--gecis-suresi) ease,
+    color var(--gecis-suresi) ease, border-color var(--gecis-suresi) ease;
+}
+
+/* --------------------------------------------------------------------
+   Yardımcı sınıflar
+   -------------------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.icerik {
+  width: 100%;
+  max-width: var(--icerik-genislik);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --------------------------------------------------------------------
+   Üst bilgi (header)
+   -------------------------------------------------------------------- */
+.ust-bilgi {
+  background: var(--renk-grafit);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ust-bilgi .icerik {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo-baglanti {
+  display: flex;
+  align-items: center;
+}
+
+.logo-baglanti img {
+  height: 64px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .logo-baglanti img {
+    height: 76px;
+  }
+}
+
+/* Ana menü — mobilde gizli, buton ile açılır */
+.ana-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--renk-grafit);
+  border-top: 1px solid var(--renk-grafit-koyu);
+  display: none;
+}
+
+.ana-menu.acik {
+  display: block;
+}
+
+.ana-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.ana-menu a {
+  display: block;
+  padding: 14px 20px;
+  color: var(--renk-metin-acik);
+  text-decoration: none;
+  border-top: 1px solid rgba(232, 234, 236, 0.08);
+  font-family: var(--yazi-baslik);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.ana-menu a:hover,
+.ana-menu a:focus-visible {
+  color: var(--renk-celik);
+}
+
+.ana-menu a[aria-current="page"] {
+  color: var(--renk-uyari);
+}
+
+/* Hamburger butonu */
+.menu-dugmesi {
+  background: transparent;
+  border: 2px solid var(--renk-metin-acik);
+  border-radius: 4px;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-dugmesi svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--renk-metin-acik);
+}
+
+/* --------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------- */
+/* TEMSİLİ görsel, gerçek iş fotoğrafı gelince değişecek */
+.hero {
+  background-image: linear-gradient(
+      rgba(25, 29, 34, 0.92),
+      rgba(25, 29, 34, 0.75)
+    ), url("../gorseller/kaynak-1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--renk-metin-acik);
+  padding: 48px 0 56px;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  max-width: 18ch;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  max-width: 55ch;
+  color: var(--renk-metin-acik);
+}
+
+.hero-butonlar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* --------------------------------------------------------------------
+   Butonlar
+   -------------------------------------------------------------------- */
+.buton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--yazi-baslik);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 14px 24px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.buton-birincil {
+  background: var(--renk-uyari);
+  color: var(--renk-grafit-koyu);
+}
+
+.buton-birincil:hover,
+.buton-birincil:focus-visible {
+  background: #c8690f;
+  color: var(--renk-grafit-koyu);
+}
+
+.buton-ikincil {
+  background: transparent;
+  border-color: var(--renk-metin-acik);
+  color: var(--renk-metin-acik);
+}
+
+.buton-ikincil:hover,
+.buton-ikincil:focus-visible {
+  background: rgba(232, 234, 236, 0.1);
+  color: #ffffff;
+}
+
+.buton-buyuk {
+  padding: 18px 32px;
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------------------
+   Hizmetler özeti (açık zemin, kart grid)
+   -------------------------------------------------------------------- */
+.hizmetler-ozeti {
+  background: var(--renk-zemin);
+  padding: 48px 0;
+}
+
+.hizmetler-ozeti h2 {
+  font-size: 1.6rem;
+  color: var(--renk-metin);
+}
+
+.kart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 28px;
+  list-style: none;
+}
+
+.kart {
+  background: #ffffff;
+  border: 1px solid #dfe2e5;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.kart-ikon {
+  width: 40px;
+  height: 40px;
+  stroke: var(--renk-celik-koyu);
+  fill: none;
+  stroke-width: 1.6;
+  margin-bottom: 12px;
+}
+
+.kart h3 {
+  font-size: 1.25rem;
+  color: var(--renk-metin);
+}
+
+.kart h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.kart h3 a:hover,
+.kart h3 a:focus-visible {
+  color: var(--renk-celik-koyu);
+  text-decoration: underline;
+}
+
+.kart p {
+  margin-bottom: 0;
+  font-size: 0.97rem;
+}
+
+.tum-hizmetler-link {
+  display: inline-block;
+  margin-top: 28px;
+  font-family: var(--yazi-baslik);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* .kart-grid--3: kart-grid ile birlikte kullanılır, masaüstünde 3 sütun
+   verir (hakkımızda "Neden Biz?" ve iletişim kartları için). */
+.kart--orta {
+  text-align: center;
+}
+
+.kart--orta .kart-ikon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kart-eylem {
+  margin-top: 16px;
+}
+
+/* Hizmet kartı görseli (index.html) — 16:10 oranlı, kart üstünde */
+.kart-gorsel {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  margin: -24px -24px 16px;
+  border-radius: 5px 5px 0 0;
+}
+
+.kart-gorsel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------
+   Akan görsel şeridi (index.html) — TEMSİLİ görseller, saf CSS animasyon
+   -------------------------------------------------------------------- */
+.gorsel-seridi {
+  background: var(--renk-grafit-koyu);
+  padding: 24px 0;
+  overflow: hidden;
+}
+
+.gorsel-seridi-track {
+  display: flex;
+  width: max-content;
+  animation: gorsel-seridi-kaydir 60s linear infinite;
+}
+
+.gorsel-seridi:hover .gorsel-seridi-track,
+.gorsel-seridi:focus-within .gorsel-seridi-track,
+.gorsel-seridi.duraklatildi .gorsel-seridi-track {
+  animation-play-state: paused;
+}
+
+/* Dokunmatik/klavye kullanıcıları için durdur-oynat düğmesi */
+.serit-dugmesi {
+  display: block;
+  margin: 12px auto 0;
+  background: transparent;
+  border: 1px solid #8a9099;
+  border-radius: 4px;
+  color: #b9bfc6;
+  font-family: var(--yazi-govde);
+  font-size: 0.82rem;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.serit-dugmesi:hover {
+  color: #ffffff;
+  border-color: #b9bfc6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .serit-dugmesi {
+    display: none; /* animasyon zaten kapalı, düğmeye gerek yok */
+  }
+}
+
+.gorsel-seridi-ic {
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.gorsel-seridi-ic img {
+  height: 140px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+@keyframes gorsel-seridi-kaydir {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.gorsel-seridi-not {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #8a9099;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gorsel-seridi {
+    overflow-x: auto;
+  }
+
+  .gorsel-seridi-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------
+   Galeri (projeler.html)
+   -------------------------------------------------------------------- */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.galeri-oge {
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid #dfe2e5;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.galeri-oge img {
+  width: 100%;
+  height: auto;
+}
+
+.galeri-oge figcaption {
+  padding: 16px;
+}
+
+.galeri-oge figcaption strong {
+  display: block;
+  font-family: var(--yazi-baslik);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.galeri-oge figcaption span {
+  font-size: 0.92rem;
+  color: #5a6169;
+}
+
+.galeri-bos {
+  background: #ffffff;
+  border: 1px solid #dfe2e5;
+  border-radius: 6px;
+  padding: 32px 24px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.galeri-bos p {
+  margin-bottom: 16px;
+}
+
+/* --------------------------------------------------------------------
+   Sayfa başlığı (iç sayfalarda kısa, koyu zemin başlık bloğu)
+   -------------------------------------------------------------------- */
+.sayfa-basligi {
+  background: var(--renk-grafit);
+  color: var(--renk-metin-acik);
+  padding: 40px 0;
+}
+
+.sayfa-basligi h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  max-width: 22ch;
+}
+
+.sayfa-basligi p {
+  font-size: 1.05rem;
+  max-width: 55ch;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------
+   Hizmet blokları (hizmetler.html içerik bölümleri)
+   .blok / .blok--zemin: aynı yapı, diğer iç sayfalarda genel içerik
+   bölümü olarak kullanılır (--zemin varyantı: hakkımızda, iletişim).
+   -------------------------------------------------------------------- */
+.hizmet-blok,
+.blok {
+  padding: 40px 0;
+}
+
+.hizmet-blok--zemin,
+.blok--zemin {
+  background: var(--renk-zemin);
+}
+
+.hizmet-blok h2,
+.blok h2 {
+  font-size: 1.5rem;
+}
+
+.hizmet-liste {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
+.hizmet-liste li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.hizmet-liste li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 10px;
+  height: 2px;
+  background: var(--renk-uyari);
+}
+
+.yer-tutucu {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #5a6169;
+  margin: 0;
+}
+
+/* Hizmet bloğu metin + görsel yerleşimi (hizmetler.html) ve
+   hakkımızda giriş bloğu metin + görsel yerleşimi (hakkimizda.html).
+   Mobilde görsel üstte, metin altta (DOM sırası). Masaüstünde yan yana;
+   --ters varyantı görselin tarafını değiştirir. */
+.hizmet-blok-ic,
+.blok-ic {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.hizmet-blok-metin,
+.hizmet-blok-gorsel,
+.blok-metin,
+.blok-gorsel {
+  width: 100%;
+  min-width: 0;
+}
+
+.hizmet-blok-gorsel img,
+.blok-gorsel img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+/* --------------------------------------------------------------------
+   Güven şeridi
+   -------------------------------------------------------------------- */
+.guven-seridi {
+  background: var(--renk-grafit-koyu);
+  color: var(--renk-metin-acik);
+  padding: 32px 0;
+}
+
+.guven-listesi {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.guven-listesi li {
+  font-family: var(--yazi-baslik);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------
+   Son çağrı bölümü
+   -------------------------------------------------------------------- */
+.son-cagri {
+  background: var(--renk-zemin);
+  padding: 48px 0;
+  text-align: center;
+}
+
+.son-cagri p {
+  font-size: 1.15rem;
+  font-family: var(--yazi-baslik);
+  font-weight: 600;
+  color: var(--renk-metin);
+}
+
+/* --------------------------------------------------------------------
+   Alt bilgi (footer)
+   -------------------------------------------------------------------- */
+.alt-bilgi {
+  background: var(--renk-grafit);
+  color: var(--renk-metin-acik);
+  padding: 40px 0 100px;
+}
+
+.alt-bilgi .icerik {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.alt-bilgi-logo img {
+  height: 48px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.alt-bilgi-iletisim {
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.alt-bilgi-iletisim li {
+  margin-bottom: 6px;
+}
+
+.alt-bilgi-iletisim a {
+  color: var(--renk-metin-acik);
+}
+
+.alt-bilgi-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.alt-bilgi-menu a {
+  color: var(--renk-metin-acik);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.alt-bilgi-menu a:hover,
+.alt-bilgi-menu a:focus-visible {
+  color: var(--renk-celik);
+}
+
+.telif {
+  font-size: 0.85rem;
+  color: #a9aeb4;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------
+   Sabit WhatsApp butonu
+   -------------------------------------------------------------------- */
+.whatsapp-buton {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-buton svg {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
+
+.whatsapp-buton:hover,
+.whatsapp-buton:focus-visible {
+  background: #1ebe5a;
+}
+
+/* ==========================================================================
+   Masaüstü / tablet genişletmesi — 768px ve üzeri
+   ========================================================================== */
+@media (min-width: 768px) {
+  .menu-dugmesi {
+    display: none;
+  }
+
+  .ana-menu {
+    position: static;
+    display: block;
+    border-top: none;
+    background: transparent;
+  }
+
+  .ana-menu ul {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .ana-menu a {
+    border-top: none;
+    padding: 10px 16px;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero p {
+    font-size: 1.15rem;
+  }
+
+  .hero-butonlar {
+    flex-direction: row;
+  }
+
+  .kart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kart-grid.kart-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeri-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .guven-listesi {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .alt-bilgi .icerik {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .alt-bilgi-logo {
+    flex-basis: 100%;
+  }
+
+  .gorsel-seridi-ic img {
+    height: 200px;
+  }
+
+  .hizmet-blok-ic,
+  .blok-ic {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .blok-ic {
+    align-items: flex-start;
+  }
+
+  .hizmet-blok--ters .hizmet-blok-ic {
+    flex-direction: row;
+  }
+}

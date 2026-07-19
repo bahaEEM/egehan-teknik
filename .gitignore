@@ -1,0 +1,14 @@
+# GİZLİ — kaynak belge repoya ve yayına ASLA girmeyecek
+# (TC kimlik no, ev adresi, vergi dairesi, fiyat bilgisi içeriyor)
+firma*.pdf
+*.pdf
+
+# Kurulum kalıntıları — sitede işi yok
+egehan-kurulum.zip
+görseller/
+
+# İç çalışma notları — repo herkese açık, bunlar müşteriyle aramızda kalır
+# (CLAUDE.md'de yayınlanmayacak referans adı ve iç notlar geçiyor)
+CLAUDE.md
+CALISMA-DUZENI.md
+.claude/
