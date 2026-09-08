@@ -1,9 +1,18 @@
-# Egehan Teknik Makine — Tanıtım Sitesi
+# Egehan Demir Yapı — Tanıtım Sitesi
 
-Ankara'da balkon yapımı, veranda kapama, kaynak, korkuluk ve boya işleri yapan
-Egehan Teknik Makine firmasının tanıtım sitesi.
+Ankara batı hattında (Malıköy, Temelli, Alcı, Sincan, Törekent) çelik
+konstrüksiyon ve demir doğrama işleri yapan Egehan Demir Yapı firmasının
+tanıtım sitesi.
 
 **Canlı site:** https://bahaeem.github.io/egehan-teknik/
+
+## Hizmetler
+
+- Çelik Konstrüksiyon Yapılar & Çatılar
+- Ferforje & Demir Doğrama (Korkuluk, Bahçe Kapısı)
+- Tel Örgü & Panel Çit Sistemleri
+- Balkon Kapatma & Özel İmalat Basketbol/Futbol Potaları
+- Fason Kaynak, Onarım & Endüstriyel Boya Hizmetleri
 
 ## Teknik
 
@@ -11,16 +20,19 @@ Egehan Teknik Makine firmasının tanıtım sitesi.
 - Tek dış bağımlılık: Google Fonts (Barlow / Barlow Condensed).
 - Mobil öncelikli, erişilebilirlik tabanlı (klavye odağı, alt metinler,
   prefers-reduced-motion desteği).
+- Sayfa başına ayrı CSS yok; tüm stil `css/stil.css` içinde.
 
 ## Görseller hakkında
 
-Sitedeki iş görselleri şimdilik temsilidir (Unsplash — ücretsiz ticari
-kullanım lisansı). Firmanın kendi iş fotoğrafları geldikçe değiştirilecektir.
-Logo ve marka Egehan Teknik Makine'ye aittir.
+Sitedeki görseller şimdilik temsilidir (Unsplash — ücretsiz ticari kullanım
+lisansı) ve bilinçli olarak soyut metal detaylarından seçilmiştir: marka,
+tanınabilir yüz veya belirli bir yer içermezler. Tümü tek tip renk işleminden
+geçirilerek birbiriyle uyumlu hale getirilmiştir. Firmanın kendi iş
+fotoğrafları geldikçe değiştirilecektir.
 
 ## Telif
 
-© 2026 Egehan Teknik Makine — Tüm hakları saklıdır.
+© 2026 Egehan Demir Yapı — Tüm hakları saklıdır.
 
-Bu depodaki kod ve içerik Egehan Teknik Makine'nin tanıtım sitesi için
-özel olarak hazırlanmıştır; izinsiz kopyalanamaz ve yeniden kullanılamaz.
+Bu depodaki kod ve içerik Egehan Demir Yapı'nın tanıtım sitesi için özel
+olarak hazırlanmıştır; izinsiz kopyalanamaz ve yeniden kullanılamaz.
