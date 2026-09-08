@@ -798,6 +798,64 @@ button {
 }
 
 /* --------------------------------------------------------------------
+   Süreç (index.html) — "Nasıl Çalışıyoruz", sıralı 4 adım
+   -------------------------------------------------------------------- */
+.surec {
+  background: #ffffff;
+  padding: 48px 0;
+}
+
+.surec h2 {
+  font-size: 1.6rem;
+  color: var(--renk-metin);
+}
+
+.surec-liste {
+  list-style: none;
+  counter-reset: surec-adim;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 28px;
+  padding: 0;
+}
+
+.surec-liste li {
+  position: relative;
+  padding-left: 52px;
+}
+
+.surec-liste li::before {
+  counter-increment: surec-adim;
+  content: counter(surec-adim);
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+  font-family: var(--yazi-baslik);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--renk-uyari);
+}
+
+.surec-liste h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3em;
+}
+
+.surec-liste p {
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+@media (min-width: 768px) {
+  .surec-liste {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+  }
+}
+
+/* --------------------------------------------------------------------
    Son çağrı bölümü
    -------------------------------------------------------------------- */
 .son-cagri {
