@@ -442,10 +442,71 @@ button {
   filter: grayscale(0.65) contrast(1.06);
 }
 
+/* 7. kart (Tadilat, Boya ve Temizlik) tek başına kalınca tüm satıra
+   yayılır; dev görünmesin diye görseli daha alçak bir orana sabitlenir. */
+.kart-grid .kart:last-child {
+  grid-column: 1 / -1;
+}
+
+.kart-grid .kart:last-child .kart-gorsel {
+  aspect-ratio: 21 / 9;
+}
+
 /* Görsel birliği: farklı kaynaklardan gelen dekoratif görselleri tek
    takım gibi göstermek için ortak renk işlemi. */
 .gorsel-islem {
   filter: grayscale(0.65) contrast(1.06);
+}
+
+/* --------------------------------------------------------------------
+   Neden Bizi Tercih Etmelisiniz (index.html) — sade liste blokları,
+   .kart görünümünden ayrışsın diye kart değil, sol kenarlı liste.
+   -------------------------------------------------------------------- */
+.neden {
+  background: #ffffff;
+  padding: 48px 0;
+}
+
+.neden h2 {
+  font-size: 1.6rem;
+  color: var(--renk-metin);
+}
+
+.neden-liste {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 0;
+}
+
+.neden-liste li {
+  border-left: 3px solid var(--renk-uyari);
+  padding: 2px 0 2px 18px;
+}
+
+.neden-liste h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3em;
+}
+
+.neden-liste p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .neden-liste {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .neden-liste {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* --------------------------------------------------------------------
@@ -774,6 +835,50 @@ button {
 }
 
 /* --------------------------------------------------------------------
+   Sık Sorulan Sorular (hizmetler.html)
+   -------------------------------------------------------------------- */
+.sss {
+  background: var(--renk-zemin);
+  padding: 48px 0;
+}
+
+.sss h2 {
+  font-size: 1.6rem;
+  color: var(--renk-metin);
+}
+
+.sss-liste {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+.sss-oge {
+  background: #ffffff;
+  border: 1px solid #dfe2e5;
+  padding: 20px 22px;
+}
+
+.sss-oge h3 {
+  font-size: 1.15rem;
+  color: var(--renk-metin);
+  margin-bottom: 8px;
+}
+
+.sss-oge p {
+  margin: 0;
+  max-width: 68ch;
+}
+
+@media (min-width: 900px) {
+  .sss-liste {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------
    Güven şeridi
    -------------------------------------------------------------------- */
 .guven-seridi {
@@ -852,6 +957,11 @@ button {
   .surec-liste {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
+  }
+
+  /* 5. adım tek başına kalınca tüm satıra yayılır, boşluk sırıtmaz. */
+  .surec-liste li:last-child {
+    grid-column: 1 / -1;
   }
 }
 
@@ -936,7 +1046,130 @@ button {
 }
 
 /* --------------------------------------------------------------------
-   Sabit WhatsApp butonu
+   Teklif şeridi — "fotoğrafını gönder" çağrısı
+   Bu sektörde müşteri çoğu zaman işin fotoğrafını çekip yolluyor;
+   bunu açıkça davet etmek genel "bize ulaşın"dan daha iyi dönüyor.
+   -------------------------------------------------------------------- */
+.teklif-serit {
+  background: var(--renk-grafit);
+  color: var(--renk-metin-acik);
+  padding: 40px 0;
+  border-top: 4px solid var(--renk-uyari);
+}
+
+.teklif-ic {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.teklif-metin h2 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.teklif-metin p {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--renk-metin-acik);
+}
+
+.teklif-butonlar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buton-wa {
+  background: #25d366;
+  color: #0e2c19;
+}
+
+.buton-wa:hover,
+.buton-wa:focus-visible {
+  background: #1ebe5a;
+  color: #0e2c19;
+}
+
+@media (min-width: 768px) {
+  .teklif-ic {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .teklif-butonlar {
+    flex-direction: row;
+    flex: 0 0 auto;
+  }
+}
+
+/* --------------------------------------------------------------------
+   Sabit mobil eylem çubuğu — ekranın altında, hep görünür.
+   Ziyaretin %80'i telefondan geliyor; numaraya ulaşmak için
+   kaydırmak zorunda kalmasınlar diye eklendi.
+   768px ve üzerinde gizlenir (masaüstünde menü zaten görünüyor).
+   -------------------------------------------------------------------- */
+.mobil-cubuk {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 210;
+  display: flex;
+  background: var(--renk-grafit-koyu);
+  border-top: 1px solid rgba(232, 234, 236, 0.14);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.mobil-cubuk a {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 10px 8px;
+  text-decoration: none;
+  font-family: var(--yazi-baslik);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+}
+
+.mobil-cubuk svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.mobil-cubuk-ara {
+  background: var(--renk-uyari);
+  color: var(--renk-grafit-koyu);
+}
+
+.mobil-cubuk-ara svg { fill: var(--renk-grafit-koyu); }
+
+.mobil-cubuk-wa {
+  background: #25d366;
+  color: #0e2c19;
+}
+
+.mobil-cubuk-wa svg { fill: #0e2c19; }
+
+/* Çubuk sayfanın en altını kapatmasın */
+@media (max-width: 767px) {
+  body { padding-bottom: 56px; }
+}
+
+@media (min-width: 768px) {
+  .mobil-cubuk { display: none; }
+}
+
+/* --------------------------------------------------------------------
+   Sabit WhatsApp butonu — mobilde çubuk devraldığı için gizlenir
    -------------------------------------------------------------------- */
 .whatsapp-buton {
   position: fixed;
@@ -962,6 +1195,10 @@ button {
 .whatsapp-buton:hover,
 .whatsapp-buton:focus-visible {
   background: #1ebe5a;
+}
+
+@media (max-width: 767px) {
+  .whatsapp-buton { display: none; }
 }
 
 /* ==========================================================================
