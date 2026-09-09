@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Egehan Demir Yapı — Ortak Stil Dosyası
+   Egehan Teknik Makina — Ortak Stil Dosyası
    Tüm sayfalar bu tek dosyayı kullanır. Sayfaya özel CSS yazılmaz.
    ========================================================================== */
 
@@ -153,54 +153,18 @@ button {
   text-decoration: none;
 }
 
-/* Amblem: müşterinin logosundan kesilen yazısız işaret.
-   Koyu zeminde okunsun diye lacivert kısmı açık griye çevrildi
-   (amblem-acik.png), turuncu korundu. Logodaki yazı kullanılmıyor;
-   firma adı .yazi-logo ile doğru Türkçe yazımıyla veriliyor. */
-.amblem {
-  height: 46px;
+/* Logo: firmanın kendi logosu (dişli + EGEHAN TEKNİK MAKİNA yazısı).
+   09.09.2026'da isim "Demir Yapı"dan geri dönünce yazı logosu yerine
+   tekrar bu kullanılmaya başlandı. */
+.logo-baglanti img {
+  height: 60px;
   width: auto;
   flex: 0 0 auto;
 }
 
 @media (min-width: 768px) {
-  .amblem {
-    height: 58px;
-  }
-}
-
-.yazi-logo {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.yazi-logo-ad {
-  font-family: var(--yazi-baslik);
-  font-weight: 700;
-  font-size: 1.75rem;
-  line-height: 1;
-  color: #ffffff;
-  letter-spacing: 0.04em;
-}
-
-.yazi-logo-alt {
-  font-family: var(--yazi-baslik);
-  font-weight: 600;
-  font-size: 0.8rem;
-  line-height: 1;
-  color: var(--renk-celik);
-  letter-spacing: 0.22em;
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .yazi-logo-ad {
-    font-size: 2.1rem;
-  }
-
-  .yazi-logo-alt {
-    font-size: 0.9rem;
+  .logo-baglanti img {
+    height: 74px;
   }
 }
 
@@ -1003,9 +967,10 @@ button {
   margin-bottom: 12px;
 }
 
-/* Footer amblemi başlıktakinden bir tık küçük */
-.alt-bilgi-logo .amblem {
-  height: 44px;
+/* Footer logosu başlıktakinden bir tık küçük */
+.alt-bilgi-logo img {
+  height: 52px;
+  width: auto;
 }
 
 .alt-bilgi-iletisim {

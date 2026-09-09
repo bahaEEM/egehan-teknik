@@ -1,7 +1,7 @@
-# Egehan Demir Yapı — Tanıtım Sitesi
+# Egehan Teknik Makina — Tanıtım Sitesi
 
 Ankara batı hattında (Malıköy, Temelli, Alcı, Sincan, Törekent) çelik
-konstrüksiyon ve demir doğrama işleri yapan Egehan Demir Yapı firmasının
+konstrüksiyon ve demir doğrama işleri yapan Egehan Teknik Makina firmasının
 tanıtım sitesi.
 
 **Canlı site:** https://bahaeem.github.io/egehan-teknik/
@@ -32,7 +32,7 @@ fotoğrafları geldikçe değiştirilecektir.
 
 ## Telif
 
-© 2026 Egehan Demir Yapı — Tüm hakları saklıdır.
+© 2026 Egehan Teknik Makina — Tüm hakları saklıdır.
 
-Bu depodaki kod ve içerik Egehan Demir Yapı'nın tanıtım sitesi için özel
+Bu depodaki kod ve içerik Egehan Teknik Makina'nın tanıtım sitesi için özel
 olarak hazırlanmıştır; izinsiz kopyalanamaz ve yeniden kullanılamaz.

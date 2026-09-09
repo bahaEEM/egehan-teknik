@@ -1,0 +1,13 @@
+İŞ FOTOĞRAFLARI BU KLASÖRE ATILACAK
+====================================
+
+Telefondan/WhatsApp'tan gelen iş fotoğraflarını olduğu gibi buraya kopyala.
+İsimleri önemli değil, ne olursa olsun.
+
+Ben sonra:
+- hepsini WebP'ye çevirip küçültürüm (site hızlı açılsın diye)
+- her birine açıklama yazıp Projeler galerisine eklerim
+- uygun olanları hizmet sayfalarındaki temsili görsellerin yerine koyarım
+
+NOT: Bu fotoğraflar Google İşletme profiline de yüklenmeli.
+Oraya stok görsel YÜKLENMEYECEK, sadece bunlar.
