@@ -1,8 +1,7 @@
 // Galeri verisi — sadece projeler.html tarafından kullanılır.
 // 09.09.2026: Firmanın GERÇEK iş fotoğrafları eklendi (WhatsApp'tan geldi,
 // WebP'ye çevrilip küçültüldü). Bunlar temsili değil, yapılmış işler.
-// Veri formatı örneği:
-// { dosya: "gorseller/is-adi.webp", baslik: "İşin kısa adı", aciklama: "Tek cümle açıklama." }
+// Veri formatı: dosya / baslik / aciklama alanları.
 const galeriVerisi = [
   { dosya: "gorseller/isler/site-giris-kapisi.webp", baslik: "Sürgülü Site Giriş Kapısı", aciklama: "Lazer kesim desenli, tekerlekli sürgülü site giriş kapısı." },
   { dosya: "gorseller/isler/bahce-kapisi-desenli.webp", baslik: "Desenli Bahçe Kapısı", aciklama: "Lazer kesim geometrik desenli çift kanatlı yaya kapısı." },
@@ -13,7 +12,10 @@ const galeriVerisi = [
   { dosya: "gorseller/isler/cardak-ahsap.webp", baslik: "Çardak ve Oturma Grubu", aciklama: "Ahşap çardak, masa ve oturma bankları." },
   { dosya: "gorseller/isler/bahce-banki.webp", baslik: "Bahçe Bankı", aciklama: "Metal ayaklı, ahşap oturmalı bahçe bankı imalatı." },
   { dosya: "gorseller/isler/salincak.webp", baslik: "Salıncak İskeleti", aciklama: "Kutu profilden salıncak iskeleti, atölye imalatı." },
-  { dosya: "gorseller/isler/tabela.webp", baslik: "Lazer Kesim Tabela", aciklama: "Sac üzerine lazer kesim yazılı yönlendirme tabelası." }
+  { dosya: "gorseller/isler/tabela.webp", baslik: "Lazer Kesim Tabela", aciklama: "Sac üzerine lazer kesim yazılı yönlendirme tabelası." },
+  { dosya: "gorseller/isler/sundurma.webp", baslik: "Sundurma Montajı", aciklama: "Villa arka bahçesine çelik sundurma imalatı ve montajı." },
+  { dosya: "gorseller/isler/futbol-kalesi.webp", baslik: "Futbol Kalesi", aciklama: "Site spor alanı için özel imalat futbol kalesi." },
+  { dosya: "gorseller/isler/tabela-isikli.webp", baslik: "Işıklı Site Tabelası", aciklama: "LED aydınlatmalı, lazer kesim yazılı site giriş tabelası." }
 ];
 
 // Galeri render — #galeri elemanı varsa çalışır, yoksa hiçbir şey yapmaz.
