@@ -4,7 +4,7 @@ Ankara batı hattında (Malıköy, Temelli, Alcı, Sincan, Törekent) çelik
 konstrüksiyon ve demir doğrama işleri yapan Egehan Teknik Makina firmasının
 tanıtım sitesi.
 
-**Canlı site:** https://bahaeem.github.io/egehan-teknik/
+**Canlı site:** https://egehanteknikmakina.com
 
 ## Hizmetler
 
@@ -12,6 +12,8 @@ tanıtım sitesi.
 - Ferforje & Demir Doğrama (Korkuluk, Bahçe Kapısı)
 - Tel Örgü & Panel Çit Sistemleri
 - Balkon Kapatma & Özel İmalat Basketbol/Futbol Potaları
+- Sineklik Sistemleri
+- Tabela ve Işıklı Reklam
 - Fason Kaynak, Onarım & Endüstriyel Boya Hizmetleri
 
 ## Teknik
@@ -24,11 +26,11 @@ tanıtım sitesi.
 
 ## Görseller hakkında
 
-Sitedeki görseller şimdilik temsilidir (Unsplash — ücretsiz ticari kullanım
-lisansı) ve bilinçli olarak soyut metal detaylarından seçilmiştir: marka,
-tanınabilir yüz veya belirli bir yer içermezler. Tümü tek tip renk işleminden
-geçirilerek birbiriyle uyumlu hale getirilmiştir. Firmanın kendi iş
-fotoğrafları geldikçe değiştirilecektir.
+Projeler sayfasındaki 13 fotoğraf firmanın kendi tamamladığı işlerdir
+(`gorseller/isler/`). Hizmet kartlarının çoğunda da bu gerçek fotoğraflar
+kullanılır. Geriye kalan birkaç görsel temsilidir (Unsplash — ücretsiz
+ticari kullanım lisansı) ve soyut metal detaylarından seçilmiştir; firmanın
+kendi fotoğrafları geldikçe onlar da değiştirilecektir.
 
 ## Telif
 
