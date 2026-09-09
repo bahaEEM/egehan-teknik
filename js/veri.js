@@ -1,8 +1,20 @@
 // Galeri verisi — sadece projeler.html tarafından kullanılır.
-// İş fotoğrafları geldikçe aşağıdaki diziye eklenecek.
+// 09.09.2026: Firmanın GERÇEK iş fotoğrafları eklendi (WhatsApp'tan geldi,
+// WebP'ye çevrilip küçültüldü). Bunlar temsili değil, yapılmış işler.
 // Veri formatı örneği:
 // { dosya: "gorseller/is-adi.webp", baslik: "İşin kısa adı", aciklama: "Tek cümle açıklama." }
-const galeriVerisi = [];
+const galeriVerisi = [
+  { dosya: "gorseller/isler/site-giris-kapisi.webp", baslik: "Sürgülü Site Giriş Kapısı", aciklama: "Lazer kesim desenli, tekerlekli sürgülü site giriş kapısı." },
+  { dosya: "gorseller/isler/bahce-kapisi-desenli.webp", baslik: "Desenli Bahçe Kapısı", aciklama: "Lazer kesim geometrik desenli çift kanatlı yaya kapısı." },
+  { dosya: "gorseller/isler/cevre-korkulugu.webp", baslik: "Çevre Korkuluğu", aciklama: "Villa çevresi için lazer kesim desenli korkuluk ve kapı." },
+  { dosya: "gorseller/isler/bahce-korkulugu.webp", baslik: "Bahçe Korkuluğu ve Kapısı", aciklama: "Dikey profil bahçe korkuluğu ile araç ve yaya kapısı." },
+  { dosya: "gorseller/isler/cam-balkon.webp", baslik: "Cam Balkon Kapatma", aciklama: "Katlanır cam sistemi ve plise sineklik uygulaması." },
+  { dosya: "gorseller/isler/sineklik.webp", baslik: "Plise Sineklik", aciklama: "Bahçe cephesine plise sineklik ve menteşeli sineklik kapısı." },
+  { dosya: "gorseller/isler/cardak-ahsap.webp", baslik: "Çardak ve Oturma Grubu", aciklama: "Ahşap çardak, masa ve oturma bankları." },
+  { dosya: "gorseller/isler/bahce-banki.webp", baslik: "Bahçe Bankı", aciklama: "Metal ayaklı, ahşap oturmalı bahçe bankı imalatı." },
+  { dosya: "gorseller/isler/salincak.webp", baslik: "Salıncak İskeleti", aciklama: "Kutu profilden salıncak iskeleti, atölye imalatı." },
+  { dosya: "gorseller/isler/tabela.webp", baslik: "Lazer Kesim Tabela", aciklama: "Sac üzerine lazer kesim yazılı yönlendirme tabelası." }
+];
 
 // Galeri render — #galeri elemanı varsa çalışır, yoksa hiçbir şey yapmaz.
 document.addEventListener("DOMContentLoaded", function () {

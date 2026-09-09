@@ -12,6 +12,7 @@
   --renk-celik: #4d90b0;
   --renk-celik-koyu: #2e5f78;
   --renk-uyari: #e07a1f;
+  --renk-uyari-koyu: #a8560c; /* açık zeminde yazı için */
   --renk-zemin: #f4f5f6;
   --renk-metin: #22272e;
   --renk-metin-acik: #e8eaec;
@@ -132,7 +133,10 @@ button {
    Üst bilgi (header)
    -------------------------------------------------------------------- */
 .ust-bilgi {
-  background: var(--renk-grafit);
+  /* Firma logosu koyu yazılı; açık zemin için tasarlanmış.
+     Bu yüzden başlık beyaz, hemen altındaki hero koyu grafit. */
+  background: #ffffff;
+  border-bottom: 1px solid #dfe2e5;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -174,8 +178,9 @@ button {
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--renk-grafit);
-  border-top: 1px solid var(--renk-grafit-koyu);
+  background: #ffffff;
+  border-bottom: 1px solid #dfe2e5;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   display: none;
 }
 
@@ -192,9 +197,9 @@ button {
 .ana-menu a {
   display: block;
   padding: 14px 20px;
-  color: var(--renk-metin-acik);
+  color: var(--renk-metin);
   text-decoration: none;
-  border-top: 1px solid rgba(232, 234, 236, 0.08);
+  border-top: 1px solid #e8eaec;
   font-family: var(--yazi-baslik);
   font-weight: 600;
   font-size: 1.05rem;
@@ -203,17 +208,17 @@ button {
 
 .ana-menu a:hover,
 .ana-menu a:focus-visible {
-  color: var(--renk-celik);
+  color: var(--renk-celik-koyu);
 }
 
 .ana-menu a[aria-current="page"] {
-  color: var(--renk-uyari);
+  color: var(--renk-uyari-koyu);
 }
 
 /* Hamburger butonu */
 .menu-dugmesi {
   background: transparent;
-  border: 2px solid var(--renk-metin-acik);
+  border: 2px solid var(--renk-metin);
   border-radius: 4px;
   padding: 8px 10px;
   cursor: pointer;
@@ -225,7 +230,7 @@ button {
 .menu-dugmesi svg {
   width: 22px;
   height: 22px;
-  stroke: var(--renk-metin-acik);
+  stroke: var(--renk-metin);
 }
 
 /* --------------------------------------------------------------------
