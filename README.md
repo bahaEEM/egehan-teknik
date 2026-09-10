@@ -14,7 +14,7 @@ tanıtım sitesi.
 - Çardak Yapımı
 - Balkon Kapatma & Özel İmalat Basketbol/Futbol Potaları
 - Sineklik Sistemleri
-- Tabela ve Işıklı Reklam
+- Tabela İmalatı
 - Fason Kaynak, Onarım & Endüstriyel Boya Hizmetleri
 - Tadilat, Boya ve Temizlik
 
@@ -28,7 +28,7 @@ tanıtım sitesi.
 
 ## Görseller hakkında
 
-Projeler sayfasındaki 13 fotoğraf firmanın kendi tamamladığı işlerdir
+Projeler sayfasındaki 12 fotoğraf firmanın kendi tamamladığı işlerdir
 (`gorseller/isler/`). Hizmet kartlarının çoğunda da bu gerçek fotoğraflar
 kullanılır. Geriye kalan birkaç görsel temsilidir (Unsplash — ücretsiz
 ticari kullanım lisansı) ve soyut metal detaylarından seçilmiştir; firmanın
