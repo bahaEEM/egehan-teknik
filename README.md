@@ -11,10 +11,12 @@ tanıtım sitesi.
 - Çelik Konstrüksiyon Yapılar & Çatılar
 - Ferforje & Demir Doğrama (Korkuluk, Bahçe Kapısı)
 - Tel Örgü & Panel Çit Sistemleri
+- Çardak Yapımı
 - Balkon Kapatma & Özel İmalat Basketbol/Futbol Potaları
 - Sineklik Sistemleri
 - Tabela ve Işıklı Reklam
 - Fason Kaynak, Onarım & Endüstriyel Boya Hizmetleri
+- Tadilat, Boya ve Temizlik
 
 ## Teknik
 
