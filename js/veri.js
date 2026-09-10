@@ -14,8 +14,7 @@ const galeriVerisi = [
   { dosya: "gorseller/isler/salincak.webp", baslik: "Salıncak İskeleti", aciklama: "Kutu profilden salıncak iskeleti, atölye imalatı." },
   { dosya: "gorseller/isler/tabela.webp", baslik: "Lazer Kesim Tabela", aciklama: "Sac üzerine lazer kesim yazılı yönlendirme tabelası." },
   { dosya: "gorseller/isler/sundurma.webp", baslik: "Sundurma Montajı", aciklama: "Villa arka bahçesine çelik sundurma imalatı ve montajı." },
-  { dosya: "gorseller/isler/futbol-kalesi.webp", baslik: "Futbol Kalesi", aciklama: "Site spor alanı için özel imalat futbol kalesi." },
-  { dosya: "gorseller/isler/tabela-isikli.webp", baslik: "Işıklı Site Tabelası", aciklama: "LED aydınlatmalı, lazer kesim yazılı site giriş tabelası." }
+  { dosya: "gorseller/isler/futbol-kalesi.webp", baslik: "Futbol Kalesi", aciklama: "Site spor alanı için özel imalat futbol kalesi." }
 ];
 
 // Galeri render — #galeri elemanı varsa çalışır, yoksa hiçbir şey yapmaz.

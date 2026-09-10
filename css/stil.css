@@ -999,6 +999,13 @@ button {
   color: var(--renk-celik);
 }
 
+.telif-alt {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
 .telif {
   font-size: 0.85rem;
   color: #a9aeb4;
