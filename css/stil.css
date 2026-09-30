@@ -596,6 +596,19 @@ button {
   color: #5a6169;
 }
 
+/* tasarim.html: 3D çizimlerin yapılmış iş sanılmaması için etiket */
+.galeri-oge figcaption .etiket-3d {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--renk-grafit);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
 .galeri-bos {
   background: #ffffff;
   border: 1px solid #dfe2e5;
