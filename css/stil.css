@@ -1274,3 +1274,20 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* index.html vitrin: 3 görsel aynı boyda (dikey oyun parkı fotoğrafı uzamasın) */
+.galeri-grid--esit .galeri-oge img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Dikey fotoğrafta işin görünen kısmı (çardak + zemin) kadraja girsin */
+img.gorsel-ust {
+  object-position: center 15%;
+}
+
+@media (min-width: 1024px) {
+  .galeri-grid--esit {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

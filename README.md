@@ -10,6 +10,7 @@ tanıtım sitesi.
 
 - Çelik Konstrüksiyon Yapılar & Çatılar
 - Ferforje & Demir Doğrama (Korkuluk, Bahçe Kapısı)
+- Site Spor Sahaları & Oyun Parkları (basket sahası, futbol sahası, oyun parkı)
 - Tel Örgü & Panel Çit Sistemleri
 - Çardak Yapımı
 - Balkon Kapatma & Özel İmalat Basketbol/Futbol Potaları
@@ -17,7 +18,8 @@ tanıtım sitesi.
 - Tabela İmalatı
 - Fason Kaynak, Onarım & Endüstriyel Boya Hizmetleri
 - Tadilat, Boya ve Temizlik
-- Balkon & Cephe Tasarımı (3D Görselleştirme)
+- Mutfak Tezgahı
+- 3D Tasarım (balkon, çatı, spor sahası, mutfak)
 
 ## Teknik
 
